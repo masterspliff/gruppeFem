@@ -1,4 +1,3 @@
-/* Base styles */
 html {
     height: 100%;
     box-sizing: border-box;
@@ -38,7 +37,7 @@ body {
 .album {
     background-color: #5d5d5dd3;
     overflow: hidden;
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    overflow-y: auto; 
     width: 100%;
     height: 500px;
     border-radius: 10px;
@@ -54,7 +53,7 @@ body {
 }
 
 .album:hover .albumCover {
-    opacity: 0; /* Hide the album cover on hover */
+    opacity: 0; 
 }
 
 .albumCover {
@@ -73,7 +72,7 @@ body {
     border-radius: 5px;
 }
 
-/* Media Queries for responsiveness */
+
 @media (max-width: 768px) {
     .album-container {
         grid-template-columns: 1fr;
@@ -107,7 +106,6 @@ body {
     color: whitesmoke
 }
 
-/* Style for the genre filter button */
 #genre-select {
     position: absolute;
     padding: 10px;
