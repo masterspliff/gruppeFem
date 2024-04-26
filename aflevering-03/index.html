@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Samling</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div id="genre-filters">
+        <select id="genre-select" onchange="filterByGenre(this.value)">
+            <option value="All">Alle Genrer</option>
+            <option value="Indie">Indie</option>
+            <option value="Rock">Rock</option>
+            <option value="Pop">Pop</option>
+            <option value="Indie">Indie</option>
+            <option value="Klassisk rock">Klassisk rock</option>
+            <option value="Dansk">Dansk</option>
+            <option value="Poprock">Poprock</option>
+            <option value="Elektronisk">Elektronisk</option>
+            <option value="Heavy metal">Metal</option>
+            
+        </select>
+    </div>
+    <div class="album-container">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

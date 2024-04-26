@@ -1,0 +1,124 @@
+/* Base styles */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(217deg, rgba(156, 12, 12, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(21, 126, 21, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(18, 18, 121, 0.8), rgba(0,0,255,0) 70.71%);
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+}
+
+.album-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    background-color: black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 60%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+}
+
+
+.album {
+    background-color: #5d5d5dd3;
+    overflow: hidden;
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.album:hover {
+    transform: scale(1.05);
+    background-color: #3d3d3d;
+}
+
+.album:hover .albumCover {
+    opacity: 0; /* Hide the album cover on hover */
+}
+
+.albumCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.albumCover img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .album-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fact, .link {
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.199);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+.fact:hover, .link a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.genre {
+    font-weight: bold;
+}
+
+.genre-text {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.tracks {
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+    color: whitesmoke
+}
+
+/* Style for the genre filter button */
+#genre-select {
+    position: absolute;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    top: 10%;
+    left: 150px;
+
+}
